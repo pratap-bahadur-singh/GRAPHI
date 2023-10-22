@@ -35,13 +35,13 @@ const app=express()
 app.use(express.json())
 app.use(bp.urlencoded({extended:true}))
 app.use(bp.json());
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname));
 
 app.get('/', function(req, res){
-    res.sendFile(__dirname+'/public/my.html');
+    res.sendFile(__dirname+'/my.html');
 });
 app.get('/login', function(req, res){
-    res.sendFile(__dirname+'/public/my.html');
+    res.sendFile(__dirname+'/my.html');
 });
 
 
